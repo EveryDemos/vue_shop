@@ -4,7 +4,7 @@
         <div class="login_box">
             <!--头像区-->
             <div class="avatar_box">
-                <img src="../assets/logo.png">
+                <img src="../assets/images.jpg">
             </div>
             <!--登录表单区-->
             <el-form ref="loginFormRef" :model="loginForm" :rules="loginFormRules" label-width="0px" class="login_form">
@@ -68,7 +68,7 @@ export default {
                 //console.log(res);
                 if(res.meta.status!=200) return this.$message.error('登录失败'); //console.log('登录失败！')
                 this.$message.success('登录成功！');
-                console.log(res);
+                //console.log(res);
                 //登录成功将token保存daostorage
                 window.sessionStorage.setItem('token',res.data.token);
                 this.$router.push('/home');
