@@ -15,7 +15,8 @@
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.5",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-table-with-tree-grid": "^0.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

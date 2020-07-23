@@ -23,6 +23,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI);
 
+import ZkTable from 'vue-table-with-tree-grid'
+
+Vue.use(ZkTable)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
