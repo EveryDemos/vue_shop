@@ -206,7 +206,7 @@ export default {
     //点击按钮，添加新的分类
    async addCate(){
         //console.log(this.addCateForm)
-       const {data:res}= await this.$http.post('categories',this.addCateForm)
+       const {data:res}= await this.$http.post('categories',this.addCateForm )
        if(res.meta.status!=201){
          return  this.$message.error("添加分类失败")
        }
