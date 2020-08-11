@@ -23,11 +23,30 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 Vue.use(ElementUI);
 
+
+//导入vue-quill-editor
+import VueQuillEditor from 'vue-quill-editor'
+
+import 'quill/dist/quill.core.css' // import styles
+import 'quill/dist/quill.snow.css' // for snow theme
+import 'quill/dist/quill.bubble.css' // for bubble theme
+
+Vue.use(VueQuillEditor, /* { default global options } */)
+
 import ZkTable from 'vue-table-with-tree-grid'
 
 Vue.use(ZkTable)
 
 Vue.config.productionTip = false
+
+//时间过滤器
+Vue.filter('dateFormat',function(originVal){
+  const dt=new Date(originVal)
+  const y=dt.getFullYear()
+  const m= (dt.getMonth()+1+'').padStart(2,'0')
+  const d=(dt.getDate()+'').padStart(2,'0')
+  return `${y}-${m}-${d}`
+})
 
 /* eslint-disable no-new */
 new Vue({
